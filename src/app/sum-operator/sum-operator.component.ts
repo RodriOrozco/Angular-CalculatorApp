@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./sum-operator.component.sass']
 })
 export class SumOperatorComponent {
-  operatorA:string = ''
-  operatorB:string = ''
+  operatorA:string = '';
+  operatorB:string = '';
   result:number = 0;
 
-  getSumResult = () => {
-    this.result = Number(this.operatorA) + Number(this.operatorB);
+  getSumResult = ():number => {
+    return this.result = Number(this.operatorA) + Number(this.operatorB);
   }
 }

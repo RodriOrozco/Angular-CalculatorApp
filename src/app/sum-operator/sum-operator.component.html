@@ -1,34 +1,35 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <label class="form-label">Operator A</label>
-      <input
-        type="text"
-        class="form-control"
-        [(ngModel)]="operatorA"
-        placeholder="write first operator here..."
-      />
-    </div>
+<!-- <div> -->
+<form>
+  <div class="form-group" style="margin-top: 20px">
+    <label class="form-label">Operator A</label>
+    <input
+      type="text"
+      class="form-control"
+      name="operatorA"
+      [(ngModel)]="operatorA"
+      placeholder="write first operator here..."
+    />
   </div>
 
-  <div class="row">
-    <div class="col">
-      <label class="form-label">Operator B</label>
-      <input
-        type="text"
-        class="form-control"
-        [(ngModel)]="operatorB"
-        placeholder="write second operator here..."
-      />
-    </div>
+  <div class="form-group" style="margin-top: 20px">
+    <label class="form-label">Operator B</label>
+    <input
+      type="text"
+      class="form-control"
+      name="operatorB"
+      [(ngModel)]="operatorB"
+      placeholder="write second operator here..."
+    />
   </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    style="margin-top: 20px"
+    (click)="getSumResult()"
+  >
+    Sum numbers!
+  </button>
+</form>
 
-  <div class="row">
-    <div class="col my-3">
-      <button class="btn btn-primary" (click)="getSumResult()">
-        Sum numbers!
-      </button>
-      <p>The result is: {{ result }}</p>
-    </div>
-  </div>
-</div>
+<p class="m-t-3">The result is: {{ result }}</p>
+<!-- </div> -->
