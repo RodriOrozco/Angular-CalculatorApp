@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sum-operator',
@@ -6,11 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./sum-operator.component.sass']
 })
 export class SumOperatorComponent {
+
+  @Output() resultOfSum = new EventEmitter<number>()
+
   operatorA:string = '';
   operatorB:string = '';
-  result:number = 0;
 
-  getSumResult = ():number => {
-    return this.result = Number(this.operatorA) + Number(this.operatorB);
+  getSumResult = ():void => {
+    let resultChildrenComponent = Number(this.operatorA) + Number(this.operatorB);
+    this.resultOfSum.emit(resultChildrenComponent);
   }
 }

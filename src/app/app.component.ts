@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'Calculator App';
+  title:string = 'Calculator App';
+  sumResult:number = 0;
+  
+  showResult = (result:number):number => {
+    return this.sumResult = result;
+  }
 }

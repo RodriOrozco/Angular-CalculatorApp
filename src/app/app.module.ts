@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SumOperatorComponent } from './sum-operator/sum-operator.component';
 import { FormsModule } from '@angular/forms';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SumOperatorComponent
+    SumOperatorComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
